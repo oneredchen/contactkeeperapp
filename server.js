@@ -1,9 +1,15 @@
 //Cannot use the import syntax as it requires Babel or Typescript
 //React can use import because it is build based of ES2015 syntax
 //For Express, this way of bringing in modules is known as CommonJS
+//Main File that handles anything related to server
 const express = require('express');
+const connectDB = require('./config/db');
 
+//Setting up ExpressJS
 const app = express();
+
+//Connecting to Database 
+connectDB();
 
 //Will look for a PORT in the env when app is deployed or else 5000 which is used for development
 const PORT = process.env.PORT || 5000;
