@@ -16,7 +16,7 @@ export default (state, action)=>{
             localStorage.setItem('token', action.payload.token);
             return{
                 ...state,
-                ...action.payload, //put token in state but why?
+                ...action.payload,
                 isAuthenticated: true,
                 loading: false
             };
